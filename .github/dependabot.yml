@@ -6,6 +6,12 @@
 version: 2
 updates:
   - package-ecosystem: "pip" # See documentation for possible values
+    directory: "/code" # Location of package manifests
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: '*'
+  - package-ecosystem: "pip" # See documentation for possible values
     directory: "/code/users" # Location of package manifests
     schedule:
       interval: "daily"
