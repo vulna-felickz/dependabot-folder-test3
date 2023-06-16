@@ -11,3 +11,9 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: '*'
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/code/users" # Location of package manifests
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: '*'
