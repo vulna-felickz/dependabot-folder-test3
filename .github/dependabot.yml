@@ -5,20 +5,20 @@
 
 version: 2
 updates:
-  - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/code" # Location of package manifests
+  - package-ecosystem: "pip" 
+    directory: "/code" 
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: '*crypto*' # Leave my cryptography vulns alone ?!
+  - package-ecosystem: "pip" # IGNORE anything in /code/users (pip)
+    directory: "/code/users"
     schedule:
       interval: "daily"
     ignore:
       - dependency-name: '*'
-  - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/code/users" # Location of package manifests
-    schedule:
-      interval: "daily"
-    ignore:
-      - dependency-name: '*'
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/code/users" # Location of package manifests
+  - package-ecosystem: "npm" # IGNORE anything in /code/users (pip)
+    directory: "/code/users" 
     schedule:
       interval: "daily"
     ignore:
